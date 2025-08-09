@@ -17,9 +17,15 @@ struct BookmarkedFeedsView: View {
                     FeedItemView(feed: feed) {
                         viewModel.toggleBookmark(feed: feed)
                     }
+                    .listRowSeparator(.hidden)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .contentShape(Rectangle()) // Makes entire area tappable
+                    .buttonStyle(.plain)
                 }
             }
-            .navigationTitle("Bookmarked Feeds")
+            .listStyle(.plain)
+            .navigationTitle("Bookmarked")
             .overlay {
                 if viewModel.bookmarkedFeeds.isEmpty {
                     VStack {

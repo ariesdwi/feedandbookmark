@@ -22,6 +22,10 @@ struct FeedDashboardView: View {
                             viewModel.loadMoreFeeds()
                         }
                     }
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .contentShape(Rectangle()) // Makes entire area tappable
+                    .buttonStyle(.plain)
                 }
                 
                 if viewModel.isLoading {
@@ -29,7 +33,8 @@ struct FeedDashboardView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
             }
-            .navigationTitle("Feed Dashboard")
+            .listStyle(.plain)
+            .navigationTitle("Feeds")
             .refreshable {
                 viewModel.fetchInitialFeeds()
             }
