@@ -33,12 +33,16 @@ This project uses a **Makefile** to streamline generating and opening the Xcode 
 1. Open your terminal and navigate to the root folder of this project.
 
 2. Generate the Xcode project by running:
+      ```bash
    make generate
 3. Open the generated Xcode project:
+      ```bash
    make open
 4. Alternatively, run both commands in one step:
+      ```bash
    make all
 5. To remove the generated project files, run:
+      ```bash
    make clean
 
 ## Base URL or API that i Used
