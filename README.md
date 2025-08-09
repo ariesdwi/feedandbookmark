@@ -31,7 +31,9 @@ This project uses a **Makefile** to streamline generating and opening the Xcode 
 ### Steps to Open
 
 1. Open your terminal and navigate to the root folder of this project.
-
+- extract zip 
+      ```bash
+      cd testdansmultipro
 2. Generate the Xcode project by running:
       ```bash
    make generate
