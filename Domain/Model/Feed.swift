@@ -6,23 +6,21 @@
 //
 import Foundation
 
-public struct Feed: Identifiable, Equatable {
+public struct Feed: Identifiable, Codable {
     public let id: String
-    public let author: String
+    public let title: String
     public let imageUrl: String
     public var isBookmarked: Bool
-    
-    public init(
-        id: String,
-        author: String,
-        imageUrl: String,
-        isBookmarked: Bool
-    ) {
+    public var isLiked: Bool
+
+    public init(id: String, title: String, imageUrl: String, isBookmarked: Bool = false, isLiked: Bool = false) {
         self.id = id
-        self.author = author
+        self.title = title
         self.imageUrl = imageUrl
         self.isBookmarked = isBookmarked
+        self.isLiked = isLiked
     }
 }
+
 
 

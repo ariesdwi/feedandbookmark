@@ -70,3 +70,17 @@ targets:
     dependencies:
       - target: Domain
       - target: Core
+
+  DataTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: DataTests
+    info:
+      path: DataTests/Info.plist
+      properties:
+        CFBundleIdentifier: com.casha.DataTests
+    dependencies:
+      - target: Data
+      - target: Core
+      - target: Domain
