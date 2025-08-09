@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Data
+import Core
 
 @main
 struct testdansmultiproApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let repository = FeedRepositoryImpl(apiClient: APIClient(baseURL: "https://picsum.photos/"))
+            FeedTabView(repository: repository)
+
         }
     }
 }
