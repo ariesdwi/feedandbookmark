@@ -30,8 +30,7 @@ This project uses a **Makefile** to streamline generating and opening the Xcode 
 
 ### Steps to Open
 
-1. Open your terminal and navigate to the root folder of this project.
-- extract zip 
+1. extract zip make sure you in root . you can see project.yaml or makefile in this folder:
       ```bash
    cd testdansmultipro
 2. Generate the Xcode project by running:
